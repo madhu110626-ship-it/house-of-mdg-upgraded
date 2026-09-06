@@ -76,18 +76,33 @@ window.MDG_DESIGNERS = [
     productIds: ["couture-cocktail-glam", "couture-gold-drape", "rgl-zardozi-lehenga", "rgl-velvet-sherwani"]
   },
   {
-    id: "sakshi",
-    slug: "sakshi",
-    name: "Sakshi",
-    bio: "Effortless resort and travel-ready luxury — breezy co-ords, kaftans, and soft drapes for destination days and evenings.",
-    image: "resort.JPG",
-    productIds: ["resort-breeze-kaftan", "resort-sunset-set", "sakshi-linen-set"]
+    id: "sakshi-bindra",
+    slug: "sakshi-bindra",
+    name: "Sakshi Bindra",
+    bio: "An elite multi-occasion house for the modern woman — from heritage bridal lehengas and elevated daywear to resort garden looks, cocktail glamour, and formal evening drapes. Sakshi Bindra designs with quiet power: refined silhouettes, luxurious fabrics, and hand-finished detail that move effortlessly from wedding mandap to destination soirée.",
+    image: "sakshi-bindra.jpg",
+    productIds: [
+      "sb-ivory-aura-bridal",
+      "sb-blush-heritage-bridal",
+      "sb-crimson-veil-lehenga",
+      "sb-soft-power-linen",
+      "sb-city-muse-kurta",
+      "sb-garden-party-kaftan",
+      "sb-sunlit-resort-set",
+      "sb-midnight-muse-cocktail",
+      "sb-champagne-hour-slip",
+      "sb-ruby-soiree-gown",
+      "sb-noir-riviera-gown",
+      "sb-gold-hour-saree"
+    ]
   }
 ];
 
 window.MDG_getDesigner = function (idOrSlug) {
   if (!idOrSlug) return null;
   var key = String(idOrSlug).toLowerCase();
+  // Back-compat: old "sakshi" slug/id → sakshi-bindra
+  if (key === "sakshi") key = "sakshi-bindra";
   return (window.MDG_DESIGNERS || []).find(function (d) {
     return d.id.toLowerCase() === key || d.slug.toLowerCase() === key;
   }) || null;

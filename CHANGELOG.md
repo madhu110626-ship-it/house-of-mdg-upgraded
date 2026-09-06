@@ -2,6 +2,11 @@
 
 ## What changed
 
+### Sakshi Bindra discoverability (2026-09-06b)
+- Hard-coded Sakshi Bindra spotlight on `index.html` (portrait + CTA; works even if JS cache is stale).
+- Featured strip on `designers.html` now highlights **Sakshi Bindra** instead of Riyaz.
+- Designer directory cards use circular portraits (`.designer-card-link`); cache-bust `?v=20260906b` on key asset links.
+
 ### Sakshi Bindra showroom (2026-09-06)
 - Renamed designer **Sakshi → Sakshi Bindra** (`sakshi-bindra`); `MDG_getDesigner` still accepts legacy `sakshi`.
 - Portrait hero (`designer-portrait`) + occasion-grouped product sections (Wedding → Casual → Outdoor → Cocktail → Evening) in `shop.js` / `style.css`.

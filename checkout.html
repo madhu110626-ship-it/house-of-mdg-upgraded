@@ -3,69 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout | House of MDG</title>
+<title>Checkout | House of Madhu Das Gupta</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:#050505;color:white;font-family:Inter,sans-serif;}
-.container{max-width:600px;margin:40px auto;padding:25px;}
-h1{font-family:Cinzel,serif;color:#d4af37;text-align:center;margin-bottom:30px;}
-.card{background:#111;border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:25px;}
-label{display:block;margin:18px 0 8px;color:#d4af37;}
-input,textarea{
-width:100%;
-padding:14px;
-background:#1a1a1a;
-border:1px solid #333;
-color:white;
-border-radius:8px;
-}
-button{
-width:100%;
-margin-top:25px;
-padding:16px;
-background:#d4af37;
-color:#111;
-border:none;
-font-weight:bold;
-font-size:16px;
-border-radius:8px;
-}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-<h1>Checkout</h1>
+<header class="inner-header">
+  <a href="index.html"><img src="logo.PNG" class="logo" alt="MDG Logo"></a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="collections.html">COLLECTIONS</a>
+    <a href="cart.html">CART <span class="cart-count">0</span></a>
+  </nav>
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20to%20book%20a%20consultation."
+     class="top-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> BOOK CONSULTATION
+  </a>
+</header>
 
-<div class="card">
-<form onsubmit="sendOrder(event)">
-<label>Full Name</label>
-<input id="name" required>
+<section class="checkout-page">
 
-<label>Phone Number</label>
-<input id="phone" required>
+  <h1 class="cart-title">Checkout</h1>
+  <p class="checkout-intro">Share your details and we’ll open WhatsApp with your order enquiry. No payment gateway — bespoke orders are confirmed personally.</p>
 
-<label>Delivery Address</label>
-<textarea id="address" rows="4" required></textarea>
+  <div class="checkout-layout">
 
-<button type="submit">Place Order on WhatsApp</button>
-</form>
-</div>
-</div>
+    <form id="checkout-form" class="checkout-form" novalidate>
+      <label for="checkout-name">Full Name</label>
+      <input id="checkout-name" name="name" type="text" required placeholder="Your name" autocomplete="name">
 
-<script>
-function sendOrder(e){
-e.preventDefault();
-let msg=`New Order from House of MDG
+      <label for="checkout-phone">Phone Number</label>
+      <input id="checkout-phone" name="phone" type="tel" required placeholder="+91 …" autocomplete="tel">
 
-Name: ${name.value}
-Phone: ${phone.value}
-Address: ${address.value}`;
-window.open(`https://wa.me/+91 98920 27604?text=${encodeURIComponent(msg)}`,'_blank');
-}
-</script>
+      <label for="checkout-notes">Notes (optional)</label>
+      <textarea id="checkout-notes" name="notes" rows="4" placeholder="Occasion, preferred dates, measurements, or questions…"></textarea>
 
+      <button type="submit" class="gold-btn checkout-wa-btn">
+        <i class="fab fa-whatsapp"></i> SEND ENQUIRY ON WHATSAPP
+      </button>
+    </form>
+
+    <div id="checkout-summary" class="checkout-summary-card">
+      <!-- filled by shop.js -->
+    </div>
+
+  </div>
+
+</section>
+
+<a href="https://wa.me/919892027604" class="whatsapp-float" target="_blank" rel="noopener">💬</a>
+<script src="products.js"></script>
+<script src="shop.js"></script>
 </body>
 </html>

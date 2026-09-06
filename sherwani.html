@@ -4,48 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sherwani | House of Madhu Das Gupta</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body style="background:#050505;color:white;">
+<body>
 
 <header class="inner-header">
-  <a href="index.html"><img src="logo.PNG" class="logo"></a>
+  <a href="index.html"><img src="logo.PNG" class="logo" alt="MDG Logo"></a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="collections.html">COLLECTIONS</a>
+    <a href="cart.html">CART <span class="cart-count">0</span></a>
+  </nav>
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20to%20book%20a%20consultation."
+     class="top-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> BOOK CONSULTATION
+  </a>
 </header>
 
-<section style="padding:120px 8%;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;">
-
-<div>
-  <img src="Sherwani.jpg" style="width:100%;border-radius:18px;">
-</div>
-
-<div>
-
-<div class="section-mini">ROYAL GROOM COLLECTION</div>
-
-<h1 style="font-family:'Cormorant Garamond';font-size:58px;color:#d4af37;">
-Ivory Royal Sherwani
-</h1>
-
-<h2 style="color:#d4af37;margin:20px 0;">₹85,000</h2>
-
-<p style="line-height:1.9;color:#ddd;">
-Elegant handcrafted sherwani tailored for modern royalty with premium fabric and intricate embroidery.
-</p>
-
-<p><strong>Fabric:</strong> Premium Silk Blend</p>
-<p><strong>Embroidery:</strong> Handcrafted</p>
-<p><strong>Delivery:</strong> 3–5 Weeks</p>
-
-<a href="https://wa.me/919892027604?text=I%20want%20this%20Sherwani" class="gold-btn" style="margin-top:30px;">
-Book Consultation
-</a>
-
-</div>
-
+<section class="plp-hero">
+  <div class="section-mini">ROYAL GROOM</div>
+  <h1>Sherwani</h1>
+  <p>Royal. Refined. Remarkable.</p>
 </section>
 
+<section class="plp-section">
+  <div class="product-grid" data-collection="Sherwani" id="product-grid"></div>
+</section>
+
+<div class="plp-cta">
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20a%20Sherwani%20consultation."
+     class="gold-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Book Sherwani Consultation
+  </a>
+</div>
+
+<a href="https://wa.me/919892027604" class="whatsapp-float" target="_blank" rel="noopener">💬</a>
+<script src="products.js"></script>
+<script src="shop.js"></script>
 </body>
 </html>

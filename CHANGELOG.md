@@ -2,6 +2,12 @@
 
 ## What changed
 
+### Sakshi Bindra showroom (2026-09-06)
+- Renamed designer **Sakshi → Sakshi Bindra** (`sakshi-bindra`); `MDG_getDesigner` still accepts legacy `sakshi`.
+- Portrait hero (`designer-portrait`) + occasion-grouped product sections (Wedding → Casual → Outdoor → Cocktail → Evening) in `shop.js` / `style.css`.
+- Elite multi-occasion lineup (~12 pieces) with `occasion` field; image `sakshi-bindra.jpg`.
+- Designer list continues to show **Sakshi Bindra**.
+
 ### New files
 - `products.js` — Catalog of products (~3 per collection: Bridal, Couture, Sherwani, Evening, Resort) with id, slug, collection, **designerId**, name, price (INR), image, description, fabric, embroidery, delivery, customization. Expanded so each of 10 designers has 3+ flagship pieces.
 - `designers.js` — Flat `window.MDG_DESIGNERS` directory (no Wedding/Pret/Sale grouping) with id/slug, name, bio, optional image, productIds; helpers `MDG_getDesigner` / `MDG_getProductsByDesigner`.
@@ -36,7 +42,7 @@
 | Punit Arora | `punit-arora` |
 | Ridhi Mehra | `ridhi-mehra` |
 | Riyaz Gangji Libas | `riyaz-gangji-libas` |
-| Sakshi | `sakshi` |
+| Sakshi Bindra | `sakshi-bindra` (accepts legacy `sakshi`) |
 | Seema Gujral | `seema-gujral` |
 
 ## Sample products

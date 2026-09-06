@@ -548,33 +548,87 @@
     var waHref =
       "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(waMsg);
 
-    var imgBlock = designer.image
-      ? '<div class="designer-showroom-img"><img src="' +
+    var heroInner;
+    if (designer.image) {
+      heroInner =
+        '<div class="designer-portrait-hero">' +
+        '<div class="designer-portrait">' +
+        '<img src="' +
         designer.image +
         '" alt="' +
         escapeHtml(designer.name) +
-        '"></div>'
-      : "";
+        '">' +
+        "</div>" +
+        '<div class="designer-portrait-copy">' +
+        '<div class="section-mini">DESIGNER SHOWROOM</div>' +
+        "<h1>" +
+        escapeHtml(designer.name) +
+        "</h1>" +
+        "<p>" +
+        escapeHtml(designer.bio) +
+        "</p>" +
+        "</div></div>";
+    } else {
+      heroInner =
+        '<div class="section-mini">DESIGNER SHOWROOM</div>' +
+        "<h1>" +
+        escapeHtml(designer.name) +
+        "</h1>" +
+        "<p>" +
+        escapeHtml(designer.bio) +
+        "</p>";
+    }
 
-    var grid =
-      products.length > 0
-        ? '<div class="product-grid designer-product-grid">' +
-          products.map(productCardHTML).join("") +
-          "</div>"
-        : '<p class="shop-empty">Pieces arriving soon. <a href="' +
-          waHref +
-          '" target="_blank" rel="noopener">Enquire on WhatsApp</a></p>';
+    var OCCASION_ORDER = ["Wedding", "Casual", "Outdoor", "Cocktail", "Evening"];
+    var hasOccasion = products.some(function (p) {
+      return p && p.occasion;
+    });
+
+    var productsHTML = "";
+    if (!products.length) {
+      productsHTML =
+        '<p class="shop-empty">Pieces arriving soon. <a href="' +
+        waHref +
+        '" target="_blank" rel="noopener">Enquire on WhatsApp</a></p>';
+    } else if (hasOccasion) {
+      OCCASION_ORDER.forEach(function (occ) {
+        var group = products.filter(function (p) {
+          return p.occasion === occ;
+        });
+        if (!group.length) return;
+        productsHTML +=
+          '<div class="designer-occasion-section">' +
+          '<h3 class="designer-occasion-heading">' +
+          escapeHtml(occ) +
+          "</h3>" +
+          '<div class="product-grid designer-product-grid">' +
+          group.map(productCardHTML).join("") +
+          "</div></div>";
+      });
+      // Any products without occasion fall into a final "More" section
+      var ungrouped = products.filter(function (p) {
+        return !p.occasion;
+      });
+      if (ungrouped.length) {
+        productsHTML +=
+          '<div class="designer-occasion-section">' +
+          '<h3 class="designer-occasion-heading">More</h3>' +
+          '<div class="product-grid designer-product-grid">' +
+          ungrouped.map(productCardHTML).join("") +
+          "</div></div>";
+      }
+    } else {
+      productsHTML =
+        '<div class="product-grid designer-product-grid">' +
+        products.map(productCardHTML).join("") +
+        "</div>";
+    }
 
     root.innerHTML =
-      '<section class="designer-showroom-hero">' +
-      '<div class="section-mini">DESIGNER SHOWROOM</div>' +
-      "<h1>" +
-      escapeHtml(designer.name) +
-      "</h1>" +
-      "<p>" +
-      escapeHtml(designer.bio) +
-      "</p>" +
-      imgBlock +
+      '<section class="designer-showroom-hero' +
+      (designer.image ? " has-portrait" : "") +
+      '">' +
+      heroInner +
       '<div class="designer-showroom-actions">' +
       '<a class="gold-btn" href="' +
       waHref +
@@ -586,7 +640,7 @@
       '<section class="plp-section designer-showroom-products">' +
       '<div class="section-mini">FLAGSHIP &amp; FAST-MOVING</div>' +
       "<h2>Shop the Collection</h2>" +
-      grid +
+      productsHTML +
       "</section>";
   }
 

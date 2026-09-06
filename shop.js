@@ -480,6 +480,144 @@
     });
   }
 
+
+  function designerLinkHTML(d) {
+    return (
+      '<a class="designer-name-link" href="designer.html?id=' +
+      encodeURIComponent(d.slug) +
+      '">' +
+      escapeHtml(d.name).toUpperCase() +
+      "</a>"
+    );
+  }
+
+  function renderDesignersList() {
+    if (!window.MDG_DESIGNERS) return;
+    var lists = document.querySelectorAll("#designers-list, [data-designers-list]");
+    if (!lists.length) return;
+    var sorted = MDG_DESIGNERS.slice().sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
+    var html = sorted.map(designerLinkHTML).join("");
+    lists.forEach(function (el) {
+      el.innerHTML = html;
+    });
+  }
+
+  function renderDesignerShowroom() {
+    var root = document.getElementById("designer-store");
+    if (!root) return;
+    if (!window.MDG_getDesigner) {
+      root.innerHTML =
+        '<div class="shop-empty-state"><h2>Designers unavailable</h2>' +
+        '<a class="gold-btn" href="designers.html">Browse Designers</a></div>';
+      return;
+    }
+
+    var designer = MDG_getDesigner(qs("id") || qs("slug"));
+    if (!designer) {
+      root.innerHTML =
+        '<div class="shop-empty-state"><h2>Designer not found</h2>' +
+        '<p>Please browse our designer directory.</p>' +
+        '<a class="gold-btn" href="designers.html">All Designers</a></div>';
+      return;
+    }
+
+    document.title = designer.name + " | House of Madhu Das Gupta";
+
+    var products =
+      typeof MDG_getProductsByDesigner === "function"
+        ? MDG_getProductsByDesigner(designer.id)
+        : typeof MDG_getByDesigner === "function"
+          ? MDG_getByDesigner(designer.id)
+          : [];
+
+    // Fallback: filter by productIds if helper missing products
+    if (!products.length && designer.productIds && window.MDG_getProduct) {
+      products = designer.productIds
+        .map(function (pid) {
+          return MDG_getProduct(pid);
+        })
+        .filter(Boolean);
+    }
+
+    var waMsg =
+      "Hello House of Madhu Das Gupta, I'd like to enquire about " +
+      designer.name +
+      "'s collection. Please advise on availability & consultation.";
+    var waHref =
+      "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(waMsg);
+
+    var imgBlock = designer.image
+      ? '<div class="designer-showroom-img"><img src="' +
+        designer.image +
+        '" alt="' +
+        escapeHtml(designer.name) +
+        '"></div>'
+      : "";
+
+    var grid =
+      products.length > 0
+        ? '<div class="product-grid designer-product-grid">' +
+          products.map(productCardHTML).join("") +
+          "</div>"
+        : '<p class="shop-empty">Pieces arriving soon. <a href="' +
+          waHref +
+          '" target="_blank" rel="noopener">Enquire on WhatsApp</a></p>';
+
+    root.innerHTML =
+      '<section class="designer-showroom-hero">' +
+      '<div class="section-mini">DESIGNER SHOWROOM</div>' +
+      "<h1>" +
+      escapeHtml(designer.name) +
+      "</h1>" +
+      "<p>" +
+      escapeHtml(designer.bio) +
+      "</p>" +
+      imgBlock +
+      '<div class="designer-showroom-actions">' +
+      '<a class="gold-btn" href="' +
+      waHref +
+      '" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> ENQUIRE ABOUT ' +
+      escapeHtml(designer.name).toUpperCase() +
+      "</a>" +
+      '<a class="outline-btn" href="designers.html">ALL DESIGNERS</a>' +
+      "</div></section>" +
+      '<section class="plp-section designer-showroom-products">' +
+      '<div class="section-mini">FLAGSHIP &amp; FAST-MOVING</div>' +
+      "<h2>Shop the Collection</h2>" +
+      grid +
+      "</section>";
+  }
+
+  function renderFeaturedDesignerStrip() {
+    var el = document.getElementById("featured-designer-strip");
+    if (!el || !window.MDG_getDesigner) return;
+    var d = MDG_getDesigner("riyaz-gangji-libas");
+    if (!d) return;
+    el.innerHTML =
+      '<div class="featured-designer-strip-inner">' +
+      (d.image
+        ? '<img src="' +
+          d.image +
+          '" alt="' +
+          escapeHtml(d.name) +
+          '">'
+        : "") +
+      '<div class="featured-designer-strip-copy">' +
+      '<div class="section-mini">FEATURED</div>' +
+      "<h2>" +
+      escapeHtml(d.name) +
+      "</h2>" +
+      "<p>" +
+      escapeHtml(d.bio) +
+      "</p>" +
+      '<a class="outline-btn" href="designer.html?id=' +
+      encodeURIComponent(d.slug) +
+      '">VIEW SHOWROOM</a>' +
+      "</div></div>";
+  }
+
   // Public API (for debugging / extensions)
   window.MDG_Shop = {
     getCart: getCart,
@@ -499,5 +637,8 @@
     renderCartPage();
     renderCheckoutSummary();
     bindCheckoutForm();
+    renderDesignersList();
+    renderDesignerShowroom();
+    renderFeaturedDesignerStrip();
   });
 })();

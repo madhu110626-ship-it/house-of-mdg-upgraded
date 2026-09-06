@@ -3,30 +3,41 @@
 ## What changed
 
 ### New files
-- `products.js` — Catalog of 15 products (~3 per collection: Bridal, Couture, Sherwani, Evening, Resort) with id, slug, collection, name, price (INR), image, description, fabric, embroidery, delivery, customization.
-- `shop.js` — Vanilla JS shop layer: product grids (`[data-collection]` / `#product-grid`), PDP from `?id=` / `?slug=`, cart in `localStorage` key `mdg_cart`, cart badge `.cart-count`, cart page qty/remove, checkout WhatsApp enquiry to `wa.me/919892027604`.
+- `products.js` — Catalog of products (~3 per collection: Bridal, Couture, Sherwani, Evening, Resort) with id, slug, collection, **designerId**, name, price (INR), image, description, fabric, embroidery, delivery, customization. Expanded so each of 10 designers has 3+ flagship pieces.
+- `designers.js` — Flat `window.MDG_DESIGNERS` directory (no Wedding/Pret/Sale grouping) with id/slug, name, bio, optional image, productIds; helpers `MDG_getDesigner` / `MDG_getProductsByDesigner`.
+- `designers.html` — Dedicated designers index (MDG black/gold); multi-column all-caps name list; optional featured strip for Riyaz Gangji Libas (`Riyaz.jpg`).
+- `designer.html` — Dynamic showroom via `?id=` / `?slug=`; bio, product grid, WhatsApp enquire CTA.
+- `shop.js` — Vanilla JS shop layer: product grids, PDP, cart (`mdg_cart`), checkout WhatsApp; plus designers list (`#designers-list` / `[data-designers-list]`) and showroom (`#designer-store`).
 - `CHANGELOG.md` — This file.
 
 ### Updated pages
-- `index.html` — Collection cards link to PLPs; CART + badge in header; couture card uses `cocktail.JPG`; shop scripts loaded.
-- `collections.html` — All 5 collections linked; cart + consultation in nav.
-- `bridal.html`, `couture.html`, `sherwani.html`, `evening.html`, `resort.html` — Cleaned duplicate/broken markup; luxury PLP headers; product grids rendered from `products.js`.
-- `product.html` — Dynamic PDP; logo fixed to `logo.PNG`; size XS–XL + Custom; Add to Cart / Enquire.
-- `cart.html` — Dynamic cart from localStorage; empty state; proceed to checkout; logo fixed.
-- `checkout.html` — Name / phone / notes + order summary; Send enquiry on WhatsApp; optional cart clear.
-- `style.css` — Appended shop styles (grids, cards, PDP, cart, badge, checkout) matching black `#050505` / gold `#d4af37`.
-- `about.html`, `contact.html`, `services.html`, `gallery.html` — Cart link + badge for nav consistency; logo path fixes.
+- `index.html` — Replaced Featured Designer + Coming Soon / Shop the Look dual cards with a clean **Designers** section (flat name list → showrooms); **DESIGNERS** nav link; loads `designers.js`.
+- `collections.html`, `bridal.html`, `couture.html`, `sherwani.html`, `evening.html`, `resort.html` — DESIGNERS in nav; shop scripts include `designers.js`.
+- `product.html`, `cart.html`, `checkout.html` — DESIGNERS in nav.
+- `about.html`, `contact.html`, `services.html`, `gallery.html` — DESIGNERS nav consistency.
+- `style.css` — Designers list (multi-column all-caps links) + showroom hero/grid styles matching black `#050505` / gold `#d4af37`.
 
 ## How to verify the flow
 
-1. Open `index.html` → click a collection card (e.g. Bridal) → lands on `bridal.html` with 3 product cards.
-2. Click a product → `product.html?id=…` shows price, details, size, qty.
-3. **Add to Cart** → header badge increments; open **CART**.
-4. Adjust qty / remove; **Proceed to Checkout**.
-5. Enter name + phone → **Send Enquiry on WhatsApp** opens `https://wa.me/919892027604` with encoded message of customer details + line items.
-6. Confirm: no payment gateway; static HTML/CSS/JS only (GitHub Pages ready).
-7. Confirm logos use `logo.PNG` (not `images/logo.png`).
-8. Confirm Couture products use `cocktail.JPG` / `evening.jpg` (not only `Riyaz.jpg`).
+1. Open `index.html` → **Designers** section lists all 10 names → click a name → `designer.html?id=…` showroom with 3–5 products.
+2. Or open `designers.html` → featured Riyaz strip + full A–Z-style list → enter a showroom.
+3. Click a product → `product.html?id=…` → **Add to Cart** → badge increments → **CART** → checkout WhatsApp enquiry.
+4. Confirm: no Wedding/Pret grouping; luxury black/gold look retained; static HTML/CSS/JS only.
+
+## Designer slugs
+
+| Name | Slug |
+|---|---|
+| Dolly J | `dolly-j` |
+| Gopi Vaid | `gopi-vaid` |
+| Kalista | `kalista` |
+| Mukti and Kavith Casa | `mukti-and-kavith-casa` |
+| Nitika Gujral | `nitika-gujral` |
+| Punit Arora | `punit-arora` |
+| Ridhi Mehra | `ridhi-mehra` |
+| Riyaz Gangji Libas | `riyaz-gangji-libas` |
+| Sakshi | `sakshi` |
+| Seema Gujral | `seema-gujral` |
 
 ## Sample products
 
@@ -41,4 +52,4 @@
 
 ## Deploy note
 
-Push contents of this folder to `madhu110626-ship-it/house-of-mdg-upgraded` (parent agent handles git/PR). Image assets (`bridal.jpg`, `Sherwani.jpg`, `evening.jpg`, `resort.JPG`, `cocktail.JPG`, `logo.PNG`, etc.) already live in the repo — do not need re-upload unless missing.
+Push contents of this folder to `madhu110626-ship-it/house-of-mdg-upgraded` branch `feature/shoppable-catalog` (parent agent handles git/PR). Image assets (`bridal.jpg`, `Sherwani.jpg`, `evening.jpg`, `resort.JPG`, `cocktail.JPG`, `Riyaz.jpg`, `logo.PNG`, etc.) already live in the repo — do not need re-upload unless missing.

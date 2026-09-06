@@ -2,6 +2,15 @@
 
 ## What changed
 
+### Sakshi Bindra e-commerce catalog (2026-09-06c)
+- Rebuilt Sakshi Bindra showroom as a proper 35-piece catalog with unique product images under `products/sakshi/sb-01.jpg` … `sb-35.jpg` (Unsplash/Pexels fashion downloads; verified JPEG >10KB).
+- Removed old Sakshi products that reused homepage assets (`bridal.jpg`, `cocktail.JPG`, `evening.jpg`, `resort.JPG`).
+- Name-only designers except Sakshi Bindra (portrait `sakshi-bindra.jpg` for list + showroom hero only).
+- Occasions: Wedding, Cocktail, Evening, Casual, Outdoor; prices ₹18,000–₹2,50,000.
+- `designers.js` productIds updated to full 35-id list; syntax restored; only sakshi-bindra has `image`.
+- Cache-bust `?v=20260906c` on `index.html`, `designers.html`, `designer.html`.
+- Denser `.designer-product-grid` (4-col) for large catalogs.
+
 ### Sakshi Bindra discoverability (2026-09-06b)
 - Hard-coded Sakshi Bindra spotlight on `index.html` (portrait + CTA; works even if JS cache is stale).
 - Featured strip on `designers.html` now highlights **Sakshi Bindra** instead of Riyaz.

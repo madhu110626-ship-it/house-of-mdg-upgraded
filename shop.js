@@ -482,23 +482,32 @@
 
 
   function designerLinkHTML(d) {
-    var initial = (d.name || "?").charAt(0).toUpperCase();
-    var portrait = d.image
-      ? '<img class="designer-card-photo" src="' +
+    // Portrait only for Sakshi Bindra — all other designers are name-only
+    var showPhoto =
+      d.image &&
+      (d.id === "sakshi-bindra" || d.slug === "sakshi-bindra");
+    if (showPhoto) {
+      return (
+        '<a class="designer-card-link designer-card-with-photo" href="designer.html?id=' +
+        encodeURIComponent(d.slug) +
+        '">' +
+        '<span class="designer-card-portrait">' +
+        '<img class="designer-card-photo" src="' +
         d.image +
         '" alt="' +
         escapeHtml(d.name) +
-        '">'
-      : '<span class="designer-card-initial" aria-hidden="true">' +
-        escapeHtml(initial) +
-        "</span>";
+        '">' +
+        "</span>" +
+        '<span class="designer-card-name">' +
+        escapeHtml(d.name) +
+        "</span>" +
+        "</a>"
+      );
+    }
     return (
-      '<a class="designer-card-link" href="designer.html?id=' +
+      '<a class="designer-card-link designer-card-name-only" href="designer.html?id=' +
       encodeURIComponent(d.slug) +
       '">' +
-      '<span class="designer-card-portrait">' +
-      portrait +
-      "</span>" +
       '<span class="designer-card-name">' +
       escapeHtml(d.name) +
       "</span>" +

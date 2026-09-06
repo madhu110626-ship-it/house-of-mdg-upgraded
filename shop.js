@@ -482,11 +482,26 @@
 
 
   function designerLinkHTML(d) {
+    var initial = (d.name || "?").charAt(0).toUpperCase();
+    var portrait = d.image
+      ? '<img class="designer-card-photo" src="' +
+        d.image +
+        '" alt="' +
+        escapeHtml(d.name) +
+        '">'
+      : '<span class="designer-card-initial" aria-hidden="true">' +
+        escapeHtml(initial) +
+        "</span>";
     return (
-      '<a class="designer-name-link" href="designer.html?id=' +
+      '<a class="designer-card-link" href="designer.html?id=' +
       encodeURIComponent(d.slug) +
       '">' +
-      escapeHtml(d.name).toUpperCase() +
+      '<span class="designer-card-portrait">' +
+      portrait +
+      "</span>" +
+      '<span class="designer-card-name">' +
+      escapeHtml(d.name) +
+      "</span>" +
       "</a>"
     );
   }
@@ -647,7 +662,7 @@
   function renderFeaturedDesignerStrip() {
     var el = document.getElementById("featured-designer-strip");
     if (!el || !window.MDG_getDesigner) return;
-    var d = MDG_getDesigner("riyaz-gangji-libas");
+    var d = MDG_getDesigner("sakshi-bindra");
     if (!d) return;
     el.innerHTML =
       '<div class="featured-designer-strip-inner">' +

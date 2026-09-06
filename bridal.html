@@ -4,95 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridal | House of Madhu Das Gupta</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body style="background:#050505;color:white;">
+<body>
 
 <header class="inner-header">
-<a href="index.html"><img src="logo.PNG" class="logo"></a>
+  <a href="index.html"><img src="logo.PNG" class="logo" alt="MDG Logo"></a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="collections.html">COLLECTIONS</a>
+    <a href="designers.html">DESIGNERS</a>
+    <a href="cart.html">CART <span class="cart-count">0</span></a>
+  </nav>
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20to%20book%20a%20consultation."
+     class="top-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> BOOK CONSULTATION
+  </a>
 </header>
 
-<section style="padding:120px 8%;">
-
-<div style="display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:start;">
-
-<div>
-
-<img src="bridal.jpg" style="width:100%;border-radius:18px;margin-bottom:20px;">
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-
-<img src="bridal.jpg" style="width:100%;border-radius:12px;">
-<img src="cocktail.JPG" style="width:100%;border-radius:12px;">
-<img src="bridal.jpg" style="width:100%;border-radius:12px;">
-
-</div>
-
-</div>
-
-<div>
-
-<div class="section-mini">SIGNATURE BRIDAL</div>
-
-<h1 style="font-family:'Cormorant Garamond';font-size:58px;color:#d4af37;">
-Royal Crimson Bridal Lehenga
-</h1>
-
-<h2 style="color:#d4af37;margin:15px 0;">₹1,45,000</h2>
-
-<p style="line-height:1.9;color:#ddd;">
-Handcrafted zardozi embroidery, luxurious silk fabric,
-and bespoke tailoring for your wedding day.
-</p>
-
-<hr style="border-color:#333;margin:25px 0;">
-
-<p><strong>Fabric:</strong> Pure Silk</p>
-<p><strong>Embroidery:</strong> Hand Zardozi</p>
-<p><strong>Delivery:</strong> 4–6 Weeks</p>
-<p><strong>Customization:</strong> Available</p>
-
-<a href="https://wa.me/919892027604?text=I%20want%20this%20Bridal%20Lehenga" class="gold-btn" style="margin-top:30px;">
-Book Consultation
-</a>
-
-</div>
-
-</div>
-
+<section class="plp-hero">
+  <div class="section-mini">SIGNATURE BRIDAL</div>
+  <h1>Bridal</h1>
+  <p>Timeless Bridal Elegance</p>
 </section>
 
-<div>
-<img src="bridal.jpg" style="width:100%;border-radius:18px;">
-</div>
-
-<div>
-
-<div class="section-mini">BRIDAL COLLECTION</div>
-
-<h1 style="font-family:'Cormorant Garamond';font-size:60px;color:#d4af37;">
-Royal Crimson Bridal Lehenga
-</h1>
-
-<p style="font-size:18px;line-height:1.9;color:#ddd;">
-Handcrafted embroidery with timeless luxury detailing.
-Every piece is tailored exclusively for you.
-</p>
-
-<h2 style="margin:25px 0;color:#d4af37;">
-₹1,45,000
-</h2>
-
-<a href="https://wa.me/919892027604?text=I%20want%20to%20book%20a%20Bridal%20Consultation" class="gold-btn">
-Book Bridal Consultation
-</a>
-
-</div>
-
+<section class="plp-section">
+  <div class="product-grid" data-collection="Bridal" id="product-grid"></div>
 </section>
-<a href="https://wa.me/919892027604" class="whatsapp-float">💬</a>
+
+<div class="plp-cta">
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20a%20Bridal%20consultation."
+     class="gold-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Book Bridal Consultation
+  </a>
+</div>
+
+<a href="https://wa.me/919892027604" class="whatsapp-float" target="_blank" rel="noopener">💬</a>
+<script src="products.js"></script>
+<script src="designers.js"></script>
+<script src="shop.js"></script>
 </body>
 </html>

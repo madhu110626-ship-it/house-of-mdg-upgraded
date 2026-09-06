@@ -3,40 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Evening Wear | House of Madhu Das Gupta</title>
+<title>Evening | House of Madhu Das Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-
-<body style="background:#000;color:white;">
+<body>
 
 <header class="inner-header">
-<a href="index.html"><img src="logo.PNG" class="logo" alt="MDG Logo"></a>
+  <a href="index.html"><img src="logo.PNG" class="logo" alt="MDG Logo"></a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="collections.html">COLLECTIONS</a>
+    <a href="designers.html">DESIGNERS</a>
+    <a href="cart.html">CART <span class="cart-count">0</span></a>
+  </nav>
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20to%20book%20a%20consultation."
+     class="top-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> BOOK CONSULTATION
+  </a>
 </header>
 
-<section style="padding:40px 8%;text-align:center;">
-
-<div class="section-mini">EVENING WEAR</div>
-
-<h1 style="font-size:48px;color:#d4af37;margin:20px 0;">
-Elegant Evenings
-</h1>
-
-<img src="evening.jpg" alt="Evening Wear"
-style="width:100%;max-width:500px;border-radius:18px;border:1px solid #d4af37;">
-
-<p style="max-width:650px;margin:30px auto;color:#ddd;line-height:1.8;">
-Designed for unforgettable evenings, our evening wear combines refined tailoring,
-luxurious fabrics and timeless sophistication.
-</p>
-
-<a href="https://wa.me/919892027604"
-class="gold-btn">
-Book Evening Consultation
-</a>
-
+<section class="plp-hero">
+  <div class="section-mini">EVENING WEAR</div>
+  <h1>Evening</h1>
+  <p>Statement Glamour</p>
 </section>
 
-<a href="https://wa.me/919892027604" class="whatsapp-float">💬</a>
+<section class="plp-section">
+  <div class="product-grid" data-collection="Evening" id="product-grid"></div>
+</section>
 
+<div class="plp-cta">
+  <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20a%20Evening%20consultation."
+     class="gold-btn" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i> Book Evening Consultation
+  </a>
+</div>
+
+<a href="https://wa.me/919892027604" class="whatsapp-float" target="_blank" rel="noopener">💬</a>
+<script src="products.js"></script>
+<script src="designers.js"></script>
+<script src="shop.js"></script>
 </body>
 </html>

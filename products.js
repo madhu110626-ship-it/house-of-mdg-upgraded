@@ -1,0 +1,483 @@
+/**
+ * House of Madhu Das Gupta — Product Catalog
+ * Static data source for PLPs / PDP / cart / designer showrooms
+ */
+window.MDG_PRODUCTS = [
+  /* ===== EXISTING — keep ids stable ===== */
+  {
+    id: "bridal-royal-crimson",
+    slug: "royal-crimson-bridal-lehenga",
+    collection: "Bridal",
+    designerId: "seema-gujral",
+    name: "Royal Crimson Bridal Lehenga",
+    price: 145000,
+    image: "bridal.jpg",
+    description: "Handcrafted zardozi embroidery on luxurious silk — a statement bridal lehenga tailored for your wedding day.",
+    fabric: "Pure Silk",
+    embroidery: "Hand Zardozi",
+    delivery: "4–6 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "bridal-ivory-pearl",
+    slug: "ivory-pearl-bridal-lehenga",
+    collection: "Bridal",
+    designerId: "nitika-gujral",
+    name: "Ivory Pearl Bridal Lehenga",
+    price: 128000,
+    image: "bridal.jpg",
+    description: "Soft ivory silk with pearl and sequin work — ethereal bridal elegance with a modern silhouette.",
+    fabric: "Silk Organza",
+    embroidery: "Pearl & Sequin",
+    delivery: "4–6 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "bridal-maroon-heritage",
+    slug: "maroon-heritage-bridal-set",
+    collection: "Bridal",
+    designerId: "ridhi-mehra",
+    name: "Maroon Heritage Bridal Set",
+    price: 165000,
+    image: "bridal.jpg",
+    description: "Deep maroon heritage bridal set with dense traditional motifs and a dramatic flared lehenga.",
+    fabric: "Banarasi Silk",
+    embroidery: "Traditional Motifs",
+    delivery: "5–7 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "couture-cocktail-glam",
+    slug: "midnight-cocktail-gown",
+    collection: "Couture",
+    designerId: "riyaz-gangji-libas",
+    name: "Midnight Cocktail Gown",
+    price: 89000,
+    image: "cocktail.JPG",
+    description: "Sculpted cocktail couture with dramatic draping — made for red-carpet evenings and private soirées.",
+    fabric: "Satin Crepe",
+    embroidery: "Crystal Embellishment",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "couture-gold-drape",
+    slug: "gold-drape-couture-gown",
+    collection: "Couture",
+    designerId: "riyaz-gangji-libas",
+    name: "Gold Drape Couture Gown",
+    price: 112000,
+    image: "evening.jpg",
+    description: "Fluid gold-toned draping with couture finishing — a bespoke masterpiece for exclusive occasions.",
+    fabric: "Tissue Silk",
+    embroidery: "Metallic Threadwork",
+    delivery: "4–6 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "couture-black-statement",
+    slug: "noir-statement-couture",
+    collection: "Couture",
+    designerId: "gopi-vaid",
+    name: "Noir Statement Couture",
+    price: 98000,
+    image: "cocktail.JPG",
+    description: "Bold black couture silhouette with refined structure and hand-finished detailing.",
+    fabric: "Silk Dupion",
+    embroidery: "Minimal Gold Accents",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "sherwani-ivory-royal",
+    slug: "ivory-royal-sherwani",
+    collection: "Sherwani",
+    designerId: "punit-arora",
+    name: "Ivory Royal Sherwani",
+    price: 85000,
+    image: "Sherwani.jpg",
+    description: "Elegant handcrafted sherwani tailored for modern royalty with premium fabric and intricate embroidery.",
+    fabric: "Premium Silk Blend",
+    embroidery: "Handcrafted",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "sherwani-midnight-nawab",
+    slug: "midnight-nawab-sherwani",
+    collection: "Sherwani",
+    designerId: "punit-arora",
+    name: "Midnight Nawab Sherwani",
+    price: 95000,
+    image: "Sherwani.jpg",
+    description: "Deep midnight blue sherwani with regal buttons and subtle embroidery for a commanding presence.",
+    fabric: "Raw Silk",
+    embroidery: "Subtle Threadwork",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "sherwani-gold-bandhgala",
+    slug: "gold-bandhgala-sherwani",
+    collection: "Sherwani",
+    designerId: "punit-arora",
+    name: "Gold Bandhgala Sherwani",
+    price: 78000,
+    image: "Sherwani.jpg",
+    description: "Classic bandhgala sherwani in warm gold tones — refined, ceremonial, and endlessly wearable.",
+    fabric: "Brocade Silk",
+    embroidery: "Gold Zari",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "evening-velvet-noir",
+    slug: "velvet-noir-evening-gown",
+    collection: "Evening",
+    designerId: "kalista",
+    name: "Velvet Noir Evening Gown",
+    price: 72000,
+    image: "evening.jpg",
+    description: "Statement evening gown with velvet depth and a sculpted waist — designed for unforgettable nights.",
+    fabric: "Velvet",
+    embroidery: "Subtle Beading",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "evening-champagne-flare",
+    slug: "champagne-flare-evening",
+    collection: "Evening",
+    designerId: "dolly-j",
+    name: "Champagne Flare Evening Dress",
+    price: 68000,
+    image: "evening.jpg",
+    description: "Champagne flare silhouette with soft shimmer — refined luxury for cocktail and formal evenings.",
+    fabric: "Georgette",
+    embroidery: "Sequin Cascade",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "evening-emerald-drape",
+    slug: "emerald-drape-evening",
+    collection: "Evening",
+    designerId: "gopi-vaid",
+    name: "Emerald Drape Evening Wear",
+    price: 75000,
+    image: "cocktail.JPG",
+    description: "Rich emerald drape evening wear with contemporary cuts and timeless sophistication.",
+    fabric: "Crepe Silk",
+    embroidery: "Tone-on-Tone",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "resort-breeze-kaftan",
+    slug: "ocean-breeze-kaftan",
+    collection: "Resort",
+    designerId: "sakshi",
+    name: "Ocean Breeze Kaftan",
+    price: 42000,
+    image: "resort.JPG",
+    description: "Effortless luxury kaftan in breathable fabric — made for elegant escapes and resort evenings.",
+    fabric: "Linen Silk",
+    embroidery: "Light Embroidery",
+    delivery: "2–3 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "resort-sunset-set",
+    slug: "sunset-resort-set",
+    collection: "Resort",
+    designerId: "sakshi",
+    name: "Sunset Resort Co-ord Set",
+    price: 48000,
+    image: "resort.JPG",
+    description: "Relaxed co-ord set with luxurious draping — polished enough for destination dinners.",
+    fabric: "Cotton Silk",
+    embroidery: "Minimal Print Accents",
+    delivery: "2–3 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "resort-ivory-flow",
+    slug: "ivory-flow-resort-dress",
+    collection: "Resort",
+    designerId: "dolly-j",
+    name: "Ivory Flow Resort Dress",
+    price: 45000,
+    image: "resort.JPG",
+    description: "Flowing ivory resort dress with soft structure — timeless ease for travel and leisure.",
+    fabric: "Chiffon",
+    embroidery: "Delicate Lace Trim",
+    delivery: "2–4 Weeks",
+    customization: "Available"
+  },
+
+  /* ===== DESIGNER FLAGSHIP ADDITIONS (sample catalog) ===== */
+  {
+    id: "sg-rose-gold-lehenga",
+    slug: "seema-rose-gold-lehenga",
+    collection: "Bridal",
+    designerId: "seema-gujral",
+    name: "Rose Gold Bridal Lehenga",
+    price: 158000,
+    image: "bridal.jpg",
+    description: "Rose-gold zari on blush silk — Seema Gujral’s signature bridal opulence for the modern wedding.",
+    fabric: "Pure Silk",
+    embroidery: "Rose Gold Zari",
+    delivery: "5–7 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "sg-emerald-bridal",
+    slug: "seema-emerald-bridal",
+    collection: "Bridal",
+    designerId: "seema-gujral",
+    name: "Emerald Heritage Bridal",
+    price: 172000,
+    image: "bridal.jpg",
+    description: "Jewel-toned emerald bridal with dense heritage motifs and a dramatic flare.",
+    fabric: "Banarasi Silk",
+    embroidery: "Heritage Motifs",
+    delivery: "5–7 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "rm-anarkali-bloom",
+    slug: "ridhi-anarkali-bloom",
+    collection: "Couture",
+    designerId: "ridhi-mehra",
+    name: "Bloom Anarkali",
+    price: 72000,
+    image: "cocktail.JPG",
+    description: "Romantic floral anarkali with soft volume — Ridhi Mehra’s festive signature.",
+    fabric: "Georgette",
+    embroidery: "Floral Sequin",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "rm-festive-sharara",
+    slug: "ridhi-festive-sharara",
+    collection: "Evening",
+    designerId: "ridhi-mehra",
+    name: "Festive Sharara Set",
+    price: 65000,
+    image: "evening.jpg",
+    description: "Light festive sharara with delicate embroidery — perfect for sangeet and cocktail nights.",
+    fabric: "Chiffon",
+    embroidery: "Thread & Sequin",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "mkc-sculpted-saree",
+    slug: "mukti-sculpted-saree",
+    collection: "Couture",
+    designerId: "mukti-and-kavith-casa",
+    name: "Sculpted Drape Saree",
+    price: 118000,
+    image: "evening.jpg",
+    description: "Architectural saree drape with structured blouse — Mukti & Kavith Casa’s couture language.",
+    fabric: "Tissue Silk",
+    embroidery: "Minimal Crystal",
+    delivery: "4–6 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "mkc-ivory-cape",
+    slug: "mukti-ivory-cape",
+    collection: "Couture",
+    designerId: "mukti-and-kavith-casa",
+    name: "Ivory Cape Ensemble",
+    price: 125000,
+    image: "cocktail.JPG",
+    description: "Dramatic ivory cape over a sleek gown base — red-carpet ready.",
+    fabric: "Crepe Silk",
+    embroidery: "Pearl Edge",
+    delivery: "4–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "mkc-noir-gown",
+    slug: "mukti-noir-gown",
+    collection: "Evening",
+    designerId: "mukti-and-kavith-casa",
+    name: "Noir Sculpted Gown",
+    price: 109000,
+    image: "evening.jpg",
+    description: "Black sculpted gown with clean lines and couture finishing.",
+    fabric: "Satin",
+    embroidery: "Tone-on-Tone",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "kalista-crystal-slip",
+    slug: "kalista-crystal-slip",
+    collection: "Evening",
+    designerId: "kalista",
+    name: "Crystal Slip Gown",
+    price: 82000,
+    image: "cocktail.JPG",
+    description: "Sleek slip silhouette with crystal cascade — Kalista’s statement evening piece.",
+    fabric: "Satin Crepe",
+    embroidery: "Crystal Cascade",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "kalista-midnight-cape",
+    slug: "kalista-midnight-cape",
+    collection: "Evening",
+    designerId: "kalista",
+    name: "Midnight Cape Dress",
+    price: 88000,
+    image: "evening.jpg",
+    description: "Midnight cape over a fitted dress — modern drama for soirées.",
+    fabric: "Velvet & Crepe",
+    embroidery: "Crystal Edge",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "gv-pearl-jacket",
+    slug: "gopi-pearl-jacket",
+    collection: "Couture",
+    designerId: "gopi-vaid",
+    name: "Pearl Embellished Jacket Set",
+    price: 92000,
+    image: "cocktail.JPG",
+    description: "Fluid drape with pearl-jacket overlay — Gopi Vaid’s elevated fusion look.",
+    fabric: "Silk Crepe",
+    embroidery: "Pearl Work",
+    delivery: "3–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "pa-indigo-bandhgala",
+    slug: "punit-indigo-bandhgala",
+    collection: "Sherwani",
+    designerId: "punit-arora",
+    name: "Indigo Bandhgala",
+    price: 72000,
+    image: "Sherwani.jpg",
+    description: "Deep indigo bandhgala with subtle zari — Punit Arora’s contemporary ceremonial cut.",
+    fabric: "Raw Silk",
+    embroidery: "Subtle Zari",
+    delivery: "3–4 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "dj-coral-kaftan",
+    slug: "dolly-coral-kaftan",
+    collection: "Resort",
+    designerId: "dolly-j",
+    name: "Coral Resort Kaftan",
+    price: 38000,
+    image: "resort.JPG",
+    description: "Soft coral kaftan with light embroidery — Dolly J’s playful resort luxury.",
+    fabric: "Linen Silk",
+    embroidery: "Light Threadwork",
+    delivery: "2–3 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "ng-blush-lehenga",
+    slug: "nitika-blush-lehenga",
+    collection: "Bridal",
+    designerId: "nitika-gujral",
+    name: "Blush Pearl Lehenga",
+    price: 118000,
+    image: "bridal.jpg",
+    description: "Soft blush bridal with pearl scatter — Nitika Gujral’s quiet luxury.",
+    fabric: "Organza Silk",
+    embroidery: "Pearl Scatter",
+    delivery: "4–6 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "ng-silver-sharara",
+    slug: "nitika-silver-sharara",
+    collection: "Bridal",
+    designerId: "nitika-gujral",
+    name: "Silver Festive Sharara",
+    price: 98000,
+    image: "bridal.jpg",
+    description: "Silver-toned festive sharara with delicate beadwork for pre-wedding events.",
+    fabric: "Net & Silk",
+    embroidery: "Silver Beading",
+    delivery: "4–5 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "rgl-zardozi-lehenga",
+    slug: "riyaz-zardozi-lehenga",
+    collection: "Bridal",
+    designerId: "riyaz-gangji-libas",
+    name: "Heritage Zardozi Lehenga",
+    price: 185000,
+    image: "bridal.jpg",
+    description: "Hand zardozi bridal lehenga — Riyaz Gangji Libas signature craftsmanship.",
+    fabric: "Pure Silk",
+    embroidery: "Hand Zardozi",
+    delivery: "6–8 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "rgl-velvet-sherwani",
+    slug: "riyaz-velvet-sherwani",
+    collection: "Sherwani",
+    designerId: "riyaz-gangji-libas",
+    name: "Velvet Royal Sherwani",
+    price: 105000,
+    image: "Sherwani.jpg",
+    description: "Velvet sherwani with gold accents — ceremonial grandeur from Riyaz Gangji Libas.",
+    fabric: "Velvet",
+    embroidery: "Gold Accents",
+    delivery: "4–6 Weeks",
+    customization: "Available"
+  },
+  {
+    id: "sakshi-linen-set",
+    slug: "sakshi-linen-resort-set",
+    collection: "Resort",
+    designerId: "sakshi",
+    name: "Linen Resort Set",
+    price: 36000,
+    image: "resort.JPG",
+    description: "Breathable linen co-ord for destination days — Sakshi’s effortless travel luxury.",
+    fabric: "Linen",
+    embroidery: "Minimal",
+    delivery: "2–3 Weeks",
+    customization: "Available"
+  }
+];
+
+window.MDG_formatPrice = function (n) {
+  return "₹" + Number(n).toLocaleString("en-IN");
+};
+
+window.MDG_getProduct = function (idOrSlug) {
+  if (!idOrSlug) return null;
+  var key = String(idOrSlug).toLowerCase();
+  return (window.MDG_PRODUCTS || []).find(function (p) {
+    return p.id.toLowerCase() === key || p.slug.toLowerCase() === key;
+  }) || null;
+};
+
+window.MDG_getByCollection = function (name) {
+  var n = String(name || "").toLowerCase();
+  return (window.MDG_PRODUCTS || []).filter(function (p) {
+    return p.collection.toLowerCase() === n;
+  });
+};
+
+window.MDG_getByDesigner = function (designerId) {
+  var key = String(designerId || "").toLowerCase();
+  return (window.MDG_PRODUCTS || []).filter(function (p) {
+    return String(p.designerId || "").toLowerCase() === key;
+  });
+};

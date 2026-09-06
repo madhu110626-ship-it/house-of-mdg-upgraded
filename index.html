@@ -18,25 +18,20 @@
 
 <body>
 
-
-
 <header>
-
 
 <img src="logo.PNG" class="logo" alt="MDG Logo">
 
 <nav>
 <a href="index.html">HOME</a>
-<a href="about.html">ABOUT</a>
 <a href="collections.html">COLLECTIONS</a>
-<a href="services.html">SERVICES</a>
-<a href="gallery.html">GALLERY</a>
-<a href="contact.html">CONTACT</a>
+<a href="designers.html">DESIGNERS</a>
+<a href="cart.html">CART <span class="cart-count">0</span></a>
 </nav>
 
 <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20to%20book%20a%20consultation."
 class="top-btn"
-target="_blank">
+target="_blank" rel="noopener">
 <i class="fab fa-whatsapp"></i> BOOK CONSULTATION
 </a>
 
@@ -66,7 +61,7 @@ Bridal • Couture • Evening Wear • Sherwani • Resort Wear
 
 <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta,%20I'd%20like%20to%20book%20a%20consultation."
 class="gold-btn"
-target="_blank">
+target="_blank" rel="noopener">
 <i class="fab fa-whatsapp"></i> BOOK CONSULTATION
 </a>
 
@@ -90,6 +85,7 @@ Personalized. Exclusive. Timeless.
 
 <div class="collection-grid">
 
+<a href="bridal.html" class="collection-card-link">
 <div class="collection-card">
 <img src="bridal.jpg" alt="Bridal">
 <div class="collection-info">
@@ -97,15 +93,19 @@ Personalized. Exclusive. Timeless.
 <p>Timeless Bridal Elegance</p>
 </div>
 </div>
+</a>
 
+<a href="couture.html" class="collection-card-link">
 <div class="collection-card">
-<img src="Riyaz.jpg" alt="Couture">
+<img src="cocktail.JPG" alt="Couture">
 <div class="collection-info">
 <h3>Couture</h3>
 <p>Bespoke Masterpieces</p>
 </div>
 </div>
+</a>
 
+<a href="sherwani.html" class="collection-card-link">
 <div class="collection-card">
 <img src="Sherwani.jpg" alt="Sherwani">
 <div class="collection-info">
@@ -113,7 +113,9 @@ Personalized. Exclusive. Timeless.
 <p>Royal. Refined. Remarkable.</p>
 </div>
 </div>
+</a>
 
+<a href="evening.html" class="collection-card-link">
 <div class="collection-card">
 <img src="evening.jpg" alt="Evening Wear">
 <div class="collection-info">
@@ -121,7 +123,9 @@ Personalized. Exclusive. Timeless.
 <p>Statement Glamour</p>
 </div>
 </div>
+</a>
 
+<a href="resort.html" class="collection-card-link">
 <div class="collection-card">
 <img src="resort.JPG" alt="Resort Wear">
 <div class="collection-info">
@@ -129,51 +133,27 @@ Personalized. Exclusive. Timeless.
 <p>Effortless Luxury</p>
 </div>
 </div>
+</a>
 
 </div>
 
 </section>
 
-<section class="designer">
+<section class="designers-home">
 
-<div class="designer-card">
+<div class="section-mini">CURATED HOUSE</div>
 
-<div class="section-mini">FEATURED DESIGNER</div>
+<h2>Designers</h2>
 
-<h2>Riyaz Gangji Libas</h2>
-
-<p>
-A celebrated name in Indian couture, known for impeccable craftsmanship, luxurious fabrics, and timeless silhouettes that blend heritage with contemporary elegance.
+<p class="designers-home-intro">
+Discover the designers showcased at House of Madhu Das Gupta.
 </p>
 
-<ul>
-<li>✔ Signature: Bespoke Couture</li>
-<li>✔ Speciality: Bridal & Occasion Wear</li>
-<li>✔ Craftsmanship: Hand-finished Luxury Garments</li>
-</ul>
+<div id="designers-list" class="designers-list" data-designers-list></div>
 
-<a href="#"
-class="outline-btn">
-<i class="fas fa-arrow-up-right-from-square"></i>
-VISIT DESIGNER
-</a>
-
-</div>
-
-<div class="coming-card">
-
-<div class="dress-icon">
-<i class="fas fa-shirt"></i>
-</div>
-
-<h2>COMING SOON</h2>
-
-<p>
-Something exquisite is on the way.<br>
-Stay Tuned.
+<p class="designers-home-cta">
+<a href="designers.html" class="outline-btn">VIEW ALL DESIGNERS</a>
 </p>
-
-</div>
 
 </section>
 
@@ -199,7 +179,7 @@ Stay Tuned.
 
 <div class="feature">
 <i class="fas fa-award"></i>
-<h4>TIMeless ELEGANCE</h4>
+<h4>TIMELESS ELEGANCE</h4>
 <p>Designs that transcend trends and time.</p>
 </div>
 
@@ -213,7 +193,7 @@ Stay Tuned.
 
 <a href="https://wa.me/919892027604?text=Hello%20House%20of%20Madhu%20Das%20Gupta."
 class="gold-btn"
-target="_blank">
+target="_blank" rel="noopener">
 <i class="fab fa-whatsapp"></i> WHATSAPP
 </a>
 
@@ -222,29 +202,24 @@ target="_blank">
 <span>© 2024 House of Madhu Das Gupta. All Rights Reserved.</span>
 
 <div class="social">
-  <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://www.youtube.com/YOUR_YOUTUBE_CHANNEL" target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-
-  <a href="https://wa.me/919892027604" target="_blank">
+  <a href="https://wa.me/919892027604" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+  <!-- Add Instagram / YouTube when real profile URLs are ready -->
 </div>
 
 </div>
 
 </footer>
-<a href="https://wa.me/919892027604" class="whatsapp-float">💬</a>
-  
+<a href="https://wa.me/919892027604" class="whatsapp-float" target="_blank" rel="noopener">💬</a>
 
+<script src="products.js"></script>
+<script src="designers.js"></script>
+<script src="shop.js"></script>
 <script>
 document.querySelectorAll('.gold-btn').forEach(btn=>{
   btn.addEventListener('click',function(e){
-    if(btn.href.includes('wa.me')){
+    if(btn.href && btn.href.includes('wa.me')){
       e.preventDefault();
       if(confirm('Book a private consultation on WhatsApp?')){
         window.open(btn.href,'_blank');
@@ -256,6 +231,3 @@ document.querySelectorAll('.gold-btn').forEach(btn=>{
 
 </body>
 </html>
-
-
-

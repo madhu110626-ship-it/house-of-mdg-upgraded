@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | House of Madhu Das Gupta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="inner-header">
+  <a href="index.html"><img src="logo.PNG" class="logo"></a>
+</header>
+
+<section style="padding:120px 8%;max-width:700px;margin:auto;">
+
+  <div class="section-mini">BOOK AN APPOINTMENT</div>
+
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,3.2rem);color:#d4af37;">
+    Private Consultation
+  </h1>
+
+  <p style="color:#ddd;line-height:1.8;margin:25px 0;">
+    Reserve a private consultation for Bridal, Sherwani, Couture, Evening Wear or Resort Wear.
+  </p>
+
+  <form id="bookingForm">
+
+    <input id="name" type="text" placeholder="Your Name" required
+    style="width:100%;padding:18px;margin-bottom:18px;background:#111;border:1px solid #333;color:white;">
+
+    <input id="phone" type="tel" placeholder="Phone Number" required
+    style="width:100%;padding:18px;margin-bottom:18px;background:#111;border:1px solid #333;color:white;">
+
+    <select id="service"
+    style="width:100%;padding:18px;margin-bottom:18px;background:#111;border:1px solid #333;color:white;">
+
+      <option>Bridal Consultation</option>
+      <option>Sherwani Consultation</option>
+      <option>Couture Consultation</option>
+      <option>Evening Wear Consultation</option>
+      <option>Resort Wear Consultation</option>
+
+    </select>
+
+    <input id="date" type="date" required
+    style="width:100%;padding:18px;margin-bottom:18px;background:#111;border:1px solid #333;color:white;">
+
+    <select id="time"
+    style="width:100%;padding:18px;margin-bottom:30px;background:#111;border:1px solid #333;color:white;">
+
+      <option>11:00 AM</option>
+      <option>12:00 PM</option>
+      <option>1:00 PM</option>
+      <option>2:00 PM</option>
+      <option>3:00 PM</option>
+      <option>4:00 PM</option>
+      <option>5:00 PM</option>
+      <option>6:00 PM</option>
+
+    </select>
+
+    <button type="submit" class="gold-btn">
+      Book Appointment
+    </button>
+
+  </form>
+
+</section>
+<a href="https://wa.me/919892027604" class="whatsapp-float">💬</a>
+<script>
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+e.preventDefault();
+
+const name=document.getElementById("name").value;
+const phone=document.getElementById("phone").value;
+const service=document.getElementById("service").value;
+const date=document.getElementById("date").value;
+const time=document.getElementById("time").value;
+
+const message=`Hello House of Madhu Das Gupta.
+
+I'd like to book a private consultation.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Date: ${date}
+Time: ${time}`;
+
+window.open(`https://wa.me/919892027604?text=${encodeURIComponent(message)}`,"_blank");
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Bridal Lehenga | House of Madhu Das Gupta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.product-page{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+padding:120px 8%;
+background:#050505;
+min-height:100vh;
+}
+
+.product-page img{
+width:100%;
+border-radius:18px;
+border:1px solid rgba(212,175,55,.3);
+}
+
+.product-info h1{
+font-family:'Cormorant Garamond',serif;
+font-size:64px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.price{
+font-size:34px;
+color:white;
+margin-bottom:30px;
+}
+
+.product-info p{
+color:#ddd;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.product-info label{
+display:block;
+margin:18px 0 8px;
+color:#d4af37;
+font-family:'Cinzel';
+font-size:13px;
+letter-spacing:2px;
+}
+
+.product-info select,
+.product-info input{
+width:100%;
+padding:14px;
+background:#111;
+color:white;
+border:1px solid rgba(212,175,55,.35);
+border-radius:8px;
+}
+
+.buy-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:30px;
+}
+
+.buy-btn{
+background:linear-gradient(135deg,#C79A2A,#E6C15A);
+color:#111;
+padding:16px;
+border-radius:8px;
+text-align:center;
+font-weight:bold;
+font-family:'Cinzel';
+}
+
+.cart-btn{
+border:1px solid #d4af37;
+color:#d4af37;
+padding:16px;
+border-radius:8px;
+text-align:center;
+font-family:'Cinzel';
+}
+
+.whatsapp{
+display:block;
+margin-top:18px;
+text-align:center;
+padding:16px;
+border:1px solid #d4af37;
+color:#d4af37;
+border-radius:8px;
+}
+
+@media(max-width:900px){
+.product-page{
+grid-template-columns:1fr;
+padding:60px 24px;
+}
+
+.product-info h1{
+font-size:48px;
+}
+
+.buy-buttons{
+grid-template-columns:1fr;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="inner-header">
+<a href="index.html"><img src="images/logo.png" class="logo"></a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="collections.html">COLLECTIONS</a>
+<a href="cart.html">CART</a>
+</nav>
+</header>
+
+<section class="product-page">
+
+<div>
+<img src="bridal.jpg" alt="Royal Bridal Lehenga">
+</div>
+
+<div class="product-info">
+
+<h1>Royal Bridal Lehenga</h1>
+
+<div class="price">₹89,999</div>
+
+<p>
+Handcrafted luxury bridal couture featuring intricate embroidery,
+premium silk fabric, and timeless craftsmanship.
+</p>
+
+<label>SIZE</label>
+
+<select>
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>Custom</option>
+</select>
+
+<label>QUANTITY</label>
+
+<input type="number" value="1" min="1">
+
+<div class="buy-buttons">
+
+<a href="checkout.html" class="buy-btn">BUY NOW</a>
+
+<a href="cart.html" class="cart-btn">ADD TO CART</a>
+
+</div>
+
+<a href="#" class="whatsapp">
+WhatsApp Stylist
+</a>
+
+</div>
+
+</section>
+
+</body>
+</html>

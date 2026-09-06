@@ -1,0 +1,1238 @@
+/* =========================
+   HOUSE OF MADHU DAS GUPTA
+   Luxury Theme
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#050505;
+  color:#fff;
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ---------- Header ---------- */
+
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 50px;
+  z-index:100;
+  background:linear-gradient(to bottom,rgba(0,0,0,.65),transparent);
+}
+
+.logo{
+  width:120px;
+}
+
+nav{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:34px;
+}
+
+nav a{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  font-size:13px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+.top-btn{
+  border:1px solid #d4af37;
+  color:#d4af37;
+  padding:12px 18px;
+  font-family:Cinzel,serif;
+  font-size:13px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  min-height:100vh;
+  background:#050505;
+}
+
+.overlay{
+  display:flex;
+  align-items:center;
+  background:linear-gradient(90deg,#000 62%,rgba(0,0,0,.08));
+  padding:120px 70px;
+}
+
+.hero-text{
+  max-width:560px;
+}
+
+.mini-title{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  letter-spacing:4px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.ornament{
+  color:#d4af37;
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.hero-text h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:78px;
+  line-height:.95;
+  margin-bottom:24px;
+}
+
+.hero-text span{
+  color:#d4af37;
+}
+
+.hero-text p{
+  color:#ddd;
+  line-height:1.9;
+  font-size:18px;
+  margin-bottom:28px;
+}
+
+.hero-services{
+  font-family:"Cormorant Garamond",serif;
+  color:#d4af37;
+  font-size:28px;
+  line-height:1.7;
+  margin-bottom:30px;
+}
+
+.gold-btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#c89a2c,#e6c25d);
+  color:#111;
+  padding:18px 34px;
+  border-radius:4px;
+  font-family:Cinzel,serif;
+  font-weight:bold;
+  box-shadow:0 10px 25px rgba(212,175,55,.35);
+}
+
+.tagline{
+  margin-top:24px;
+  color:#d4af37;
+  font-family:"Cormorant Garamond",serif;
+  font-size:24px;
+}
+
+.hero img{
+  width:100%;
+  height:100vh;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+/* ---------- Collections ---------- */
+
+.collections{
+  padding:90px 40px;
+}
+
+.section-mini{
+  text-align:center;
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  letter-spacing:3px;
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.collections h2,
+footer h2{
+  text-align:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  margin-bottom:45px;
+}
+
+.collection-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+}
+
+.collection-card{
+  background:#0c0c0c;
+  border:1px solid rgba(212,175,55,.35);
+  border-radius:16px;
+  overflow:hidden;
+  transition:.35s;
+}
+
+.collection-card:hover{
+  transform:translateY(-6px);
+}
+
+.collection-card img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  display:block;
+}
+
+.collection-info{
+  background:#090909;
+  padding:20px;
+  text-align:center;
+}
+
+.collection-info h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  margin-bottom:6px;
+}
+
+.collection-info p{
+  color:#d4af37;
+  font-size:14px;
+}
+
+/* ---------- Designer ---------- */
+
+.designer{
+  max-width:1400px;
+  margin:auto;
+  padding:80px 40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.designer-card,
+.coming-card{
+  background:linear-gradient(#090909,#111);
+  border:1px solid rgba(212,175,55,.35);
+  border-radius:18px;
+  padding:48px;
+}
+
+.designer-card h2{
+  text-align:left;
+  font-family:"Cormorant Garamond",serif;
+  color:#d4af37;
+  font-size:62px;
+  line-height:1;
+  margin:20px 0;
+}
+
+.designer-card p{
+  color:#ddd;
+  line-height:1.9;
+  margin-bottom:22px;
+  font-size:17px;
+}
+
+.designer-card ul{
+  list-style:none;
+  line-height:2;
+  margin-bottom:28px;
+}
+
+.outline-btn{
+  display:inline-block;
+  border:1px solid #d4af37;
+  color:#d4af37;
+  padding:14px 22px;
+  font-family:Cinzel,serif;
+}
+
+.coming-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.dress-icon{
+  font-size:52px;
+  color:#d4af37;
+  margin-bottom:20px;
+}
+
+.coming-card h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  color:#d4af37;
+  margin-bottom:18px;
+}
+
+.coming-card p{
+  color:#ddd;
+  line-height:2;
+  font-size:18px;
+}
+
+/* ---------- Features ---------- */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin:0 40px 60px;
+  border:1px solid rgba(212,175,55,.25);
+}
+
+.feature{
+  padding:34px 22px;
+  text-align:center;
+  border-right:1px solid #222;
+}
+
+.feature:last-child{
+  border-right:none;
+}
+
+.feature i{
+  color:#d4af37;
+  font-size:34px;
+  margin-bottom:16px;
+}
+
+.feature h4{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+.feature p{
+  color:#ddd;
+  line-height:1.7;
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:70px 40px;
+}
+
+footer p{
+  color:#d4af37;
+  margin-bottom:32px;
+}
+
+.footer-bottom{
+  margin-top:40px;
+  padding-top:25px;
+  border-top:1px solid rgba(212,175,55,.25);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  color:#999;
+}
+
+.social{
+  display:flex;
+  gap:18px;
+  color:#d4af37;
+  font-size:22px;
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media(max-width:900px){
+
+header{
+  position:relative;
+  background:#000;
+  padding:18px 20px;
+  flex-direction:column;
+  gap:18px;
+}
+
+.logo{
+  width:90px;
+}
+
+nav{
+  position:static;
+  transform:none;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+
+.top-btn{
+  padding:10px 18px;
+  font-size:12px;
+}
+
+.hero{
+  display:flex;
+  flex-direction:column-reverse;
+  min-height:auto;
+}
+
+.hero img{
+  width:100%;
+  height:460px;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.overlay{
+  padding:42px 24px;
+  background:#050505;
+}
+
+.hero-text{
+  max-width:100%;
+}
+
+.hero-text h1{
+  font-size:54px;
+}
+
+.hero-text p{
+  font-size:17px;
+}
+
+.hero-services{
+  font-size:18px;
+}
+
+.gold-btn{
+  width:100%;
+  text-align:center;
+}
+
+.tagline{
+  font-size:20px;
+}
+
+.collection-grid{
+  grid-template-columns:1fr;
+}
+
+.collection-card img{
+  height:420px;
+  object-fit:contain;
+  background:#111;
+  padding:10px;
+}
+
+.designer{
+  grid-template-columns:1fr;
+  padding:60px 20px;
+}
+
+.designer-card,
+.coming-card{
+  padding:36px 24px;
+}
+
+.designer-card h2{
+  font-size:52px;
+}
+
+.features{
+  grid-template-columns:1fr;
+  margin:30px 20px;
+}
+
+.feature{
+  border-right:none;
+  border-bottom:1px solid #222;
+}
+
+.feature:last-child{
+  border-bottom:none;
+}
+
+.footer-bottom{
+  flex-direction:column;
+  gap:20px;
+  text-align:center;
+}
+
+}
+/* Floating WhatsApp Button */
+
+.whatsapp-float{
+position:fixed;
+bottom:22px;
+right:22px;
+width:62px;
+height:62px;
+background:#D4AF37;
+color:#111;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(212,175,55,.35);
+z-index:9999;
+transition:.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+/* About page mobile heading */
+@media (max-width:768px){
+
+.page-banner h1{
+font-size:42px;
+line-height:1.1;
+padding:0 20px;
+}
+
+.page-banner{
+height:52vh;
+}
+
+}
+/* ===== CINEMATIC HERO ===== */
+
+.hero img{
+animation:heroZoom 14s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+.hero-text{
+animation:fadeUp 1.3s ease forwards;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(35px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero-text h1{
+text-shadow:0 8px 30px rgba(212,175,55,.18);
+}
+/* ===== MDG CINEMATIC LUXURY HERO ===== */
+
+.hero img{
+animation:heroZoom 14s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+.hero-text{
+animation:fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(35px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero-text h1{
+text-shadow:0 8px 30px rgba(212,175,55,.25);
+}
+
+.gold-btn{
+transition:.35s ease;
+}
+
+.gold-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 40px rgba(212,175,55,.35);
+}
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  transition:opacity .6s ease;
+}
+
+#loader img{
+  width:140px;
+  animation:logoGlow 2s ease-in-out;
+}
+
+@keyframes logoGlow{
+  0%{opacity:0;transform:scale(.8);}
+  50%{opacity:1;transform:scale(1);}
+  100%{opacity:1;}
+}
+/* ===== MDG Luxury Typography Update (All Pages) ===== */
+
+/* ===== MDG Luxury Typography (Final) ===== */
+
+html{
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  line-height:1.75;
+}
+
+/* Hero title */
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2rem,5vw,3.2rem);
+    line-height:1.08;
+    letter-spacing:-0.03em;
+    text-align:center;
+    margin:0 auto 18px;
+    text-wrap:balance;
+}
+
+/* All H1 */
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.9rem,4.5vw,3rem);
+  line-height:1.12;
+  letter-spacing:-0.015em;
+  text-wrap:balance;
+}
+
+/* H2 */
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.6rem,3.8vw,2.4rem);
+  line-height:1.2;
+  text-wrap:balance;
+}
+
+/* H3 */
+h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem,3vw,1.6rem);
+  line-height:1.25;
+}
+
+/* Section labels */
+.section-mini{
+  font-size:.8rem;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+}
+
+/* Paragraphs */
+p, li{
+  font-size:1rem;
+  line-height:1.8;
+}
+
+/* Mobile refinement */
+@media (max-width:768px){
+  .hero h1{
+    font-size:34px;
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    text-align:center;
+    max-width:14ch;
+    margin:0 auto;
+    text-wrap:balance;
+  }
+}
+     /* Keep MDG hero title on one line */
+.hero h1{
+    white-space: nowrap;
+    font-size: clamp(1.45rem, 4vw, 2.2rem);
+}
+.hero{
+  padding: 70px 24px 60px;
+  text-align: center;
+}
+
+.hero p{
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+.hero h1 span{
+    display: inline;
+}
+
+.hero h1 br{
+    display: none;
+}
+letter-spacing:-0.02em;
+  }
+}
+/* Mobile one-line collection heading */
+@media (max-width:768px){
+  .collections h2{
+    font-size: clamp(1.35rem, 4vw, 1.9rem);
+    white-space: nowrap;
+    text-wrap: nowrap;
+    letter-spacing: -0.02em;
+  }
+}
+/* ===== MDG Luxury Spacing (Step 1) ===== */
+
+section{
+  padding: 80px 0;
+}
+
+.section-mini{
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+h1,h2{
+  margin-bottom: 18px;
+}
+
+p{
+  max-width: 700px;
+}
+
+@media (max-width:768px){
+  section{
+    padding: 64px 0;
+  }
+
+  h1,h2{
+    margin-bottom: 16px;
+  }
+}
+/* ===== MDG Luxury Collection Cards ===== */
+
+.collection-card{
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,.18);
+  transition:.45s ease;
+}
+
+.collection-card img{
+  transition:transform .7s ease;
+}
+
+.collection-card:hover{
+  transform:translateY(-8px);
+  border-color:#D4AF37;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+.collection-card:hover img{
+  transform:scale(1.06);
+}
+
+.collection-info{
+  padding:22px;
+}
+
+.collection-info h3{
+  margin-bottom:8px;
+}
+/* ===== MDG Luxury Glass Navigation ===== */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(5,5,5,.72);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(212,175,55,.15);
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+    padding:14px 18px;
+}
+
+nav a{
+    color:#D4AF37;
+    font-size:.82rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    transition:all .35s ease;
+    position:relative;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:1px;
+    background:#D4AF37;
+    transition:.35s ease;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+@media (max-width:768px){
+
+    nav{
+        gap:14px;
+        padding:12px 8px;
+    }
+
+    nav a{
+        font-size:.72rem;
+        letter-spacing:.12em;
+    }
+
+    .logo{
+        width:76px;
+    }
+
+}
+/* ===== MDG Luxury Glass Navigation ===== */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(5,5,5,.72);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(212,175,55,.15);
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+    padding:14px 18px;
+}
+
+nav a{
+    color:#D4AF37;
+    font-size:.82rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    transition:all .35s ease;
+    position:relative;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:1px;
+    background:#D4AF37;
+    transition:.35s ease;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+@media (max-width:768px){
+
+    nav{
+        gap:14px;
+        padding:12px 8px;
+    }
+
+    nav a{
+        font-size:.72rem;
+        letter-spacing:.12em;
+    }
+
+  .logo{
+    width:92px;
+    display:block;
+    margin:0 auto 16px;
+}
+
+}
+/* ===== MDG Luxury Spacing System ===== */
+
+section{
+    padding:80px 8%;
+}
+
+.section-mini{
+    margin-bottom:18px;
+    text-align:center;
+}
+
+h1{
+    margin-bottom:16px;
+}
+
+h2{
+    margin-bottom:14px;
+}
+
+p{
+    margin-bottom:18px;
+}
+
+@media (max-width:768px){
+    section{
+        padding:60px 6%;
+    }
+
+    h1{
+        margin-bottom:14px;
+    }
+
+    h2{
+        margin-bottom:12px;
+    }
+}
+/* ===== MDG Premium Heading Polish ===== */
+
+/* Featured Designer title */
+.featured-designer h2,
+.designer-card h2{
+    font-size:clamp(2rem,5vw,3rem);
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    text-wrap:balance;
+}
+
+/* Footer brand */
+footer h2,
+.footer-brand h2{
+    font-size:clamp(1.8rem,4vw,2.6rem);
+    line-height:1.15;
+    letter-spacing:-0.02em;
+    margin-bottom:12px;
+}
+
+/* Better footer spacing */
+footer{
+    padding-top:70px;
+}
+
+footer p{
+    opacity:.9;
+}
+/* ===== MDG Hero Alignment Final ===== */
+
+.hero{
+    text-align:center;
+}
+
+.hero .logo,
+.hero img:first-child{
+    display:block;
+    margin:0 auto 22px;
+}
+
+.hero p{
+    max-width:640px;
+    margin:0 auto 24px;
+}
+
+.hero .gold-btn,
+.hero button{
+    margin:0 auto;
+    display:inline-flex;
+}
+/* ===== MDG Final Luxury Typography System ===== */
+
+/* Consistent hero spacing */
+.hero{
+    text-align:center;
+    padding-top:40px;
+    padding-bottom:60px;
+}
+
+/* Hero headings across all pages */
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.1rem,7vw,3.3rem);
+    line-height:1.02;
+    letter-spacing:-0.03em;
+    max-width:12ch;
+    margin:0 auto 20px;
+    text-wrap:balance;
+}
+
+/* Hide forced line breaks inside hero titles */
+.hero h1 br{
+    display:none;
+}
+
+/* Featured Designer */
+.featured-designer h2,
+.designer-card h2{
+    font-size:clamp(1.9rem,5vw,2.8rem);
+    line-height:1.08;
+    max-width:11ch;
+    margin:0 auto 18px;
+    text-wrap:balance;
+}
+
+/* Main section headings */
+h2{
+    font-size:clamp(1.8rem,4vw,2.5rem);
+    line-height:1.12;
+}
+
+/* Small gold labels */
+.section-mini{
+    font-size:.82rem;
+    letter-spacing:.35em;
+    margin-bottom:18px;
+}
+
+/* Mobile refinement */
+@media (max-width:768px){
+
+    .hero{
+        padding-top:24px;
+        padding-bottom:48px;
+    }
+
+    .hero h1{
+        font-size:clamp(1.95rem,8vw,2.7rem);
+        max-width:11ch;
+    }
+
+    .featured-designer h2,
+    .designer-card h2{
+        font-size:clamp(1.8rem,6vw,2.5rem);
+    }
+}
+/* ===== MDG Final Luxury Polish ===== */
+
+section{
+  padding: clamp(64px,8vw,104px) 0;
+}
+
+.hero,
+.page-hero{
+  padding-top: clamp(32px,5vw,56px);
+  padding-bottom: clamp(48px,7vw,80px);
+}
+
+h1,h2{
+  font-family:'Cormorant Garamond',serif;
+  line-height:1.06;
+  letter-spacing:-0.03em;
+  text-wrap:balance;
+  margin-bottom:.4em;
+}
+
+.hero h1,
+.hero h2,
+.page-hero h1,
+.page-hero h2,
+.story h2,
+.vision h2,
+.services h2,
+.featured h2{
+  font-size:clamp(2rem,6vw,3.4rem);
+}
+
+.hero h1 br,
+.hero h2 br,
+.story h2 br,
+.vision h2 br,
+.services h2 br,
+.featured h2 br{
+  display:none;
+}
+
+.section-mini{
+  letter-spacing:.28em;
+  margin-bottom:16px;
+}
+
+p{
+  max-width:62ch;
+  line-height:1.8;
+}
+
+@media (max-width:768px){
+
+  section{
+    padding:56px 24px;
+  }
+
+  .hero,
+  .page-hero{
+    padding-top:24px;
+    padding-bottom:40px;
+  }
+
+  .hero h1,
+  .hero h2,
+  .page-hero h1,
+  .page-hero h2,
+  .story h2,
+  .vision h2,
+  .services h2,
+  .featured h2{
+    font-size:clamp(2rem,7vw,2.8rem);
+    white-space:normal;
+  }
+}
+/* ===== MDG Final Header Spacing Fix ===== */
+
+/* Reduce space below sticky header */
+header{
+    padding:12px 6%;
+}
+
+/* Pull every hero section closer to the navbar */
+.hero,
+.page-hero{
+    padding-top:24px !important;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    header{
+        padding:10px 5%;
+    }
+
+    .hero,
+    .page-hero{
+        padding-top:18px !important;
+    }
+
+}
+/* ===== Final Hero Balance ===== */
+
+header{
+    padding:10px 6%;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:24px 24px 60px;
+}
+
+.hero p{
+    max-width:620px;
+}
+/* ===== MDG Final Editorial Balance ===== */
+
+/* Elegant hero layout on every page */
+.hero,
+.page-hero{
+    min-height:78vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:32px 24px 56px;
+}
+
+/* Consistent editorial headings */
+.hero h1,
+.page-hero h1{
+    max-width:12ch;
+    margin:0 auto 18px;
+    line-height:1.04;
+    letter-spacing:-0.03em;
+    text-wrap:balance;
+}
+
+/* Consistent portrait cards */
+.collection-card img,
+.gallery-item img{
+    aspect-ratio:4/5;
+    object-fit:cover;
+}
+
+/* Premium image hover */
+.collection-card:hover img,
+.gallery-item:hover img{
+    transform:scale(1.04);
+}
+
+/* Mobile refinement */
+@media (max-width:768px){
+
+.hero,
+.page-hero{
+    min-height:72vh;
+    padding:20px 20px 44px;
+}
+
+.hero h1,
+.page-hero h1{
+    max-width:11ch;
+}
+
+}

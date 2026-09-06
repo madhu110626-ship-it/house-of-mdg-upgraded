@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | House of MDG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#050505;color:white;font-family:Inter,sans-serif;}
+.container{max-width:600px;margin:40px auto;padding:25px;}
+h1{font-family:Cinzel,serif;color:#d4af37;text-align:center;margin-bottom:30px;}
+.card{background:#111;border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:25px;}
+label{display:block;margin:18px 0 8px;color:#d4af37;}
+input,textarea{
+width:100%;
+padding:14px;
+background:#1a1a1a;
+border:1px solid #333;
+color:white;
+border-radius:8px;
+}
+button{
+width:100%;
+margin-top:25px;
+padding:16px;
+background:#d4af37;
+color:#111;
+border:none;
+font-weight:bold;
+font-size:16px;
+border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Checkout</h1>
+
+<div class="card">
+<form onsubmit="sendOrder(event)">
+<label>Full Name</label>
+<input id="name" required>
+
+<label>Phone Number</label>
+<input id="phone" required>
+
+<label>Delivery Address</label>
+<textarea id="address" rows="4" required></textarea>
+
+<button type="submit">Place Order on WhatsApp</button>
+</form>
+</div>
+</div>
+
+<script>
+function sendOrder(e){
+e.preventDefault();
+let msg=`New Order from House of MDG
+
+Name: ${name.value}
+Phone: ${phone.value}
+Address: ${address.value}`;
+window.open(`https://wa.me/+91 98920 27604?text=${encodeURIComponent(msg)}`,'_blank');
+}
+</script>
+
+</body>
+</html>

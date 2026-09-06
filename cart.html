@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart | House of Madhu Das Gupta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.cart-page{
+max-width:1200px;
+margin:auto;
+padding:120px 30px;
+background:#050505;
+color:white;
+}
+
+.cart-title{
+font-family:'Cormorant Garamond',serif;
+font-size:64px;
+color:#d4af37;
+text-align:center;
+margin-bottom:50px;
+}
+
+.cart-card{
+display:grid;
+grid-template-columns:220px 1fr;
+gap:30px;
+padding:25px;
+background:#0b0b0b;
+border:1px solid rgba(212,175,55,.3);
+border-radius:18px;
+margin-bottom:30px;
+}
+
+.cart-card img{
+width:100%;
+border-radius:12px;
+}
+
+.cart-info h3{
+font-family:'Cormorant Garamond',serif;
+font-size:38px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.cart-info p{
+color:#ddd;
+margin:8px 0;
+}
+
+.summary{
+background:#0b0b0b;
+border:1px solid rgba(212,175,55,.3);
+border-radius:18px;
+padding:35px;
+}
+
+.summary h2{
+font-family:'Cormorant Garamond',serif;
+font-size:42px;
+color:#d4af37;
+margin-bottom:25px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+font-size:18px;
+}
+
+.total{
+border-top:1px solid rgba(212,175,55,.3);
+padding-top:20px;
+font-size:24px;
+font-weight:bold;
+}
+
+.checkout-btn{
+display:block;
+width:100%;
+margin-top:30px;
+padding:18px;
+text-align:center;
+background:linear-gradient(135deg,#C79A2A,#E6C15A);
+color:#111;
+font-family:'Cinzel';
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.cart-title{
+font-size:48px;
+}
+
+.cart-card{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="inner-header">
+
+<a href="index.html">
+<img src="images/logo.png" class="logo">
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="collections.html">COLLECTIONS</a>
+<a href="cart.html">CART</a>
+</nav>
+
+</header>
+
+<section class="cart-page">
+
+<h1 class="cart-title">Shopping Cart</h1>
+
+<div class="cart-card">
+
+<img src="bridal.jpg" alt="Bridal Lehenga">
+
+<div class="cart-info">
+
+<h3>Royal Bridal Lehenga</h3>
+
+<p>Size: M</p>
+
+<p>Quantity: 1</p>
+
+<p>Price: ₹89,999</p>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<div class="row">
+<span>Subtotal</span>
+<span>₹89,999</span>
+</div>
+
+<div class="row">
+<span>Shipping</span>
+<span>Free</span>
+</div>
+
+<div class="row total">
+<span>Total</span>
+<span>₹89,999</span>
+</div>
+
+<a href="checkout.html" class="checkout-btn">
+PROCEED TO CHECKOUT
+</a>
+
+</div>
+
+</section>
+
+</body>
+</html>
